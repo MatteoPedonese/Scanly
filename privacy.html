@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scanly – Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Scanly, the browser extension that reads QR codes and barcodes locally.">
+  <style>
+    :root {
+      --bg: #f6f7f9; --card: #ffffff; --text: #1f2937; --muted: #5b6472; --line: #e5e7eb;
+      --accent: #0d9f6e; --accent-bg: #e6f8f1; --link: #0b6bcb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0b1020; --card: #121a2e; --text: #e6e9f0; --muted: #9aa4b8; --line: #243049;
+              --accent: #34ffaa; --accent-bg: #0f2a26; --link: #7cc4ff; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 28px 16px 64px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; }
+    .brand i { width: 14px; height: 14px; border-radius: 4px; background: var(--accent); box-shadow: 0 0 14px var(--accent); display: inline-block; }
+    .lang { display: flex; gap: 6px; }
+    .lang button { font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+                   border: 1px solid var(--line); background: var(--card); color: var(--text); }
+    .lang button[aria-pressed="true"] { background: var(--accent-bg); border-color: var(--accent); color: var(--text); font-weight: 600; }
+    article { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px clamp(18px, 4vw, 36px); }
+    h1 { font-size: clamp(26px, 5vw, 34px); line-height: 1.2; margin: 0 0 6px; }
+    h2 { font-size: 19px; margin: 30px 0 6px; }
+    p, ul { margin: 8px 0; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+    .tldr { background: var(--accent-bg); border-left: 4px solid var(--accent); border-radius: 8px; padding: 12px 16px; margin: 18px 0; }
+    a { color: var(--link); }
+    code { background: var(--accent-bg); padding: 1px 6px; border-radius: 5px; font-size: .92em; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; width: 32%; }
+    footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 22px; }
+    /* senza JavaScript si vedono entrambe le lingue */
+    .js section[lang]:not(.on) { display: none; }
+    section[lang] + section[lang] { margin-top: 40px; padding-top: 32px; border-top: 2px dashed var(--line); }
+    .js section[lang] + section[lang] { margin-top: 0; padding-top: 0; border-top: 0; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><i></i> Scanly</div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="it" aria-pressed="false">Italiano</button>
+    </div>
+  </header>
+
+  <article>
+    <!-- ========================= ENGLISH ========================= -->
+    <section lang="en" class="on">
+      <h1>Privacy Policy</h1>
+      <div class="meta">Scanly browser extension · Last updated: 23 October 2026</div>
+
+      <div class="tldr"><strong>In short:</strong> Scanly works entirely on your device. It does not send, sell or share any data, has no account, and uses no analytics or ads.</div>
+
+      <h2>What Scanly does</h2>
+      <p>Scanly is a browser extension that reads QR codes and barcodes from an area of your screen that you select, or from an image you provide, and lets you copy the result. It can also run a local check on links to flag common phishing signals.</p>
+
+      <h2>Data Scanly handles</h2>
+      <table>
+        <tr><th>Screen area you select</th><td>When you start a scan (toolbar icon or <code>Alt+Shift+Q</code>) and select an area, Scanly captures an image of the visible tab and reads the code in it. The image is processed in the browser’s memory and is not saved or transmitted.</td></tr>
+        <tr><th>Images you provide</th><td>Images you drop, paste or choose on the “Read from image” page are processed locally in the same way and are not uploaded.</td></tr>
+        <tr><th>Scanned codes (history)</th><td>If the history is on, Scanly stores the text of up to the last 100 codes you scanned, their type and the date, in the extension’s local storage on your device. This storage is not synced to your account or to other devices.</td></tr>
+        <tr><th>Settings</th><td>Whether the history is on or off.</td></tr>
+      </table>
+
+      <h2>What Scanly does not do</h2>
+      <ul>
+        <li>It does not send any data to the developer, to servers, or to third parties.</li>
+        <li>It does not require an account or collect personal information.</li>
+        <li>It does not use analytics, tracking, cookies or advertising.</li>
+        <li>It does not sell or share data, and does not use data for purposes unrelated to its single function.</li>
+        <li>It does not run remote code: the reading libraries (jsQR and ZXing, both open source) are bundled inside the extension.</li>
+      </ul>
+
+      <h2>Link check</h2>
+      <p>The safety check on links runs on your device using built-in rules (for example: shortened links, IP addresses, look-alike characters in domains, unencrypted <code>http</code>). It does not contact any external service and cannot guarantee that a site is safe. Scanly never opens a link on its own: a link opens only when you click “Open link”, and the site you reach is governed by its own privacy policy.</p>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><code>activeTab</code> – lets Scanly capture the current tab only when you start a scan.</li>
+        <li><code>scripting</code> – shows the selection overlay and the results panel on the current tab, only when you start a scan.</li>
+        <li><code>storage</code> – stores the optional history and the history setting on your device.</li>
+      </ul>
+      <p>Scanly requests no host permissions and does not read your pages in the background.</p>
+
+      <h2>Your choices</h2>
+      <p>On the “Read from image” page you can delete single items, clear the whole history, or turn it off. Uninstalling the extension removes all data it stored.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the new version will be published at this address with an updated date.</p>
+
+      <h2>Contact</h2>
+      <p>Matteo Pedonese – <a href="mailto:matteo.pedonese@gmail.com">matteo.pedonese@gmail.com</a></p>
+    </section>
+
+    <!-- ========================= ITALIANO ========================= -->
+    <section lang="it">
+      <h1>Informativa sulla privacy</h1>
+      <div class="meta">Estensione per browser Scanly · Ultimo aggiornamento: 23 ottobre 2026</div>
+
+      <div class="tldr"><strong>In breve:</strong> Scanly funziona interamente sul tuo dispositivo. Non invia, vende né condivide dati, non richiede un account e non usa analytics né pubblicità.</div>
+
+      <h2>Cosa fa Scanly</h2>
+      <p>Scanly è un’estensione per browser che legge QR code e barcode da un’area dello schermo che selezioni, o da un’immagine che fornisci, e ti permette di copiare il risultato. Può inoltre eseguire un controllo locale sui link per segnalare i segnali tipici del phishing.</p>
+
+      <h2>Dati trattati</h2>
+      <table>
+        <tr><th>Area dello schermo selezionata</th><td>Quando avvii una scansione (icona nella barra o <code>Alt+Shift+Q</code>) e selezioni un’area, Scanly cattura un’immagine della scheda visibile e legge il codice. L’immagine è elaborata nella memoria del browser e non viene salvata né trasmessa.</td></tr>
+        <tr><th>Immagini che fornisci</th><td>Le immagini che trascini, incolli o scegli nella pagina “Leggi da immagine” sono elaborate localmente allo stesso modo e non vengono caricate online.</td></tr>
+        <tr><th>Codici letti (cronologia)</th><td>Se la cronologia è attiva, Scanly salva il testo degli ultimi 100 codici letti al massimo, il tipo e la data, nello storage locale dell’estensione sul tuo dispositivo. Questo storage non è sincronizzato con il tuo account né con altri dispositivi.</td></tr>
+        <tr><th>Impostazioni</th><td>Se la cronologia è attiva o disattivata.</td></tr>
+      </table>
+
+      <h2>Cosa Scanly non fa</h2>
+      <ul>
+        <li>Non invia dati allo sviluppatore, a server o a terzi.</li>
+        <li>Non richiede un account e non raccoglie informazioni personali.</li>
+        <li>Non usa analytics, tracciamento, cookie o pubblicità.</li>
+        <li>Non vende né condivide dati e non li usa per scopi estranei alla sua unica funzione.</li>
+        <li>Non esegue codice remoto: le librerie di lettura (jsQR e ZXing, entrambe open source) sono incluse nell’estensione.</li>
+      </ul>
+
+      <h2>Controllo dei link</h2>
+      <p>Il controllo di sicurezza sui link avviene sul tuo dispositivo con regole interne (ad esempio: link accorciati, indirizzi IP, caratteri simili nei domini, <code>http</code> non cifrato). Non contatta alcun servizio esterno e non può garantire che un sito sia sicuro. Scanly non apre mai un link da sola: un link si apre solo quando clicchi “Apri link”, e il sito che raggiungi è regolato dalla sua informativa.</p>
+
+      <h2>Permessi</h2>
+      <ul>
+        <li><code>activeTab</code> – permette a Scanly di catturare la scheda corrente solo quando avvii una scansione.</li>
+        <li><code>scripting</code> – mostra la selezione e il pannello dei risultati sulla scheda corrente, solo quando avvii una scansione.</li>
+        <li><code>storage</code> – salva sul tuo dispositivo la cronologia facoltativa e la relativa impostazione.</li>
+      </ul>
+      <p>Scanly non richiede permessi sugli host e non legge le tue pagine in background.</p>
+
+      <h2>Le tue scelte</h2>
+      <p>Nella pagina “Leggi da immagine” puoi eliminare singoli elementi, svuotare tutta la cronologia o disattivarla. Disinstallando l’estensione vengono rimossi tutti i dati che ha salvato.</p>
+
+      <h2>Modifiche all’informativa</h2>
+      <p>Se questa informativa cambia, la nuova versione sarà pubblicata a questo indirizzo con la data aggiornata.</p>
+
+      <h2>Contatti</h2>
+      <p>Matteo Pedonese – <a href="mailto:matteo.pedonese@gmail.com">matteo.pedonese@gmail.com</a></p>
+    </section>
+  </article>
+
+  <footer>© 2026 Scanly</footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add("js");
+    var buttons = document.querySelectorAll(".lang button");
+    var sections = document.querySelectorAll("section[lang]");
+    function show(lang) {
+      root.lang = lang;
+      sections.forEach(function (s) { s.classList.toggle("on", s.lang === lang); });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      document.title = lang === "it" ? "Scanly – Informativa sulla privacy" : "Scanly – Privacy Policy";
+      try { history.replaceState(null, "", "#" + lang); } catch (e) {}
+    }
+    buttons.forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.lang); }); });
+    var hash = location.hash.replace("#", "");
+    var pref = (hash === "it" || hash === "en") ? hash : ((navigator.language || "en").toLowerCase().indexOf("it") === 0 ? "it" : "en");
+    show(pref);
+  })();
+</script>
+</body>
+</html>
